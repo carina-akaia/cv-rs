@@ -1,0 +1,13 @@
+**/.DS_Store
+.env
+**/*_history
+**/logs
+*.log
+**/target
+**/res
+**/dist
+**/*generated*
+Cargo.lock
+**/.cache
+**/output.*
+*.local

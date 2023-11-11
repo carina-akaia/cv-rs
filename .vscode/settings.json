@@ -1,0 +1,14 @@
+{
+	"cSpell.words": [
+		"Chatbox",
+		"clippy",
+		"reqwest",
+		"Routable",
+		"rustup",
+		"Skillset",
+		"unocss"
+	],
+	"editor.tabSize": 4,
+	"rust-analyzer.showUnlinkedFileNotification": false,
+	"git.ignoreLimitWarning": true
+}

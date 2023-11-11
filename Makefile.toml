@@ -1,0 +1,63 @@
+[env]
+
+
+[tasks.format]
+install_crate = "rustfmt"
+command = "cargo"
+args = ["fmt", "--", "--emit=files"]
+
+
+[tasks.clean]
+command = "cargo"
+args = ["clean"]
+
+
+[tasks.dioxus-cli-setup]
+command = "cargo"
+args = ["install", "dioxus-cli"]
+# args = ["install", "--git", "https://github.com/DioxusLabs/cli"]
+
+
+[tasks.miniserve-setup]
+command = "cargo"
+args = ["install", "--locked", "miniserve"]
+
+
+[tasks.experts-dev-build]
+cwd = "./"
+command = "dx"
+args = ["build", "--platform", "web"]
+dependencies = ["dioxus-cli-setup"]
+
+
+[tasks.experts-prod-build]
+cwd = "./"
+command = "dx"
+args = ["build", "--platform", "web", "--release"]
+dependencies = ["dioxus-cli-setup"]
+
+
+[tasks.experts-dev-serve]
+cwd = "./"
+command = "dx"
+args = ["serve", "--platform", "web", "--hot-reload", "--port", "1337"]
+dependencies = ["dioxus-cli-setup"]
+
+
+[tasks.experts-prod-serve]
+cwd = "./target/web/experts"
+command = "miniserve"
+args = ["--spa", "--index", "index.html"]
+dependencies = ["miniserve-setup"]
+
+
+[tasks.dev]
+dependencies = ["experts-dev-serve"]
+
+
+[tasks.build]
+dependencies = ["experts-prod-build"]
+
+
+[tasks.serve]
+dependencies = ["experts-prod-serve"]

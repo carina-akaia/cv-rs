@@ -1,0 +1,29 @@
+[application]
+# App (Project) Name
+name = "experts"
+# Dioxus App Default Platform
+# desktop, web, mobile, ssr
+default_platform = "web"
+# `build` & `serve` dist path
+out_dir = "target/web/experts"
+# resource (public) file folder
+asset_dir = "public"
+
+[web.app]
+# HTML title tag content
+title = "AKAIA Experts"
+
+[web.watcher]
+# when watcher trigger, regenerate the `index.html`
+reload_html = false
+# which files or dirs will be watcher monitoring
+watch_path = ["public", "src"]
+
+# include assets from `asset_dir` in web platform
+[web.resource]
+style = ["style.css"]
+script = ["vendor/unocss_runtime_0_55_6.js"]
+
+[web.resource.dev]
+style = ["style.css"]
+script = ["vendor/unocss_runtime_0_55_6.js"]

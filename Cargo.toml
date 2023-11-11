@@ -1,0 +1,33 @@
+[package]
+name = "experts"
+version = "0.1.0"
+edition = "2021"
+description = "Career passport backed by bleeding edge technologies."
+readme = "README.md"
+authors = ["Carina.Akaia.io <cvo.akaia@gmail.com>"]
+license = "LGPL"
+
+
+[dependencies]
+dioxus = "0.4.0"
+dioxus-class = "0.4.0"
+
+dioxus-free-icons = { version = "0.7.0", features = [
+	"font-awesome-brands",
+	"hero-icons-outline",
+	"hero-icons-solid",
+	"ionicons",
+] }
+
+dioxus-helmet = "0.2.4"
+dioxus-query = "0.3.2"
+dioxus-router = "0.4.1"
+dioxus-std = { version = "0.4.0", features = [] }
+dioxus-web = "0.4.0"
+fermi = "0.4.0"
+log = "0.4.20"
+near-sdk = "4.1.1"
+regex = "1.10.2"
+reqwest = "0.11.22"
+unocss-classes = { version = "2.0.0", features = ["dioxus", "runtime"] }
+url = "2.4.1"
