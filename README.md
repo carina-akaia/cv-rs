@@ -1,4 +1,4 @@
-# AKAIA Experts
+# cv-rs
 
 Career passport backed by bleeding edge technologies.
 
